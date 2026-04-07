@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Notas Personales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1> Gestor de Notas Personales</h1>
+            <p>Administra tus notas de manera sencilla</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Formulario para agregar nota -->
+            <div class="form-section">
+                <h2>Crear Nueva Nota</h2>
+                <form id="notaForm">
+                    <div class="form-group">
+                        <label for="titulo">Título:</label>
+                        <input type="text" id="titulo" name="titulo" required placeholder="Ej: Compras">
+                    </div>
+                    <div class="form-group">
+                        <label for="contenido">Contenido:</label>
+                        <textarea id="contenido" name="contenido" required rows="4" placeholder="Escribe tu nota aquí..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary"> Agregar Nota</button>
+                </form>
+            </div>
+
+            <!-- Lista de notas -->
+            <div class="notes-section">
+                <h2> Mis Notas</h2>
+                <div id="notesList" class="notes-list">
+                    <div class="loading">Cargando notas...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
